@@ -36,7 +36,12 @@ citecolor=black, menucolor=black, filecolor=black,
 
 % Пакет Tikz
 \usepackage{tikz}
-\usetikzlibrary{arrows,positioning,shadows}
+\usetikzlibrary{shapes,arrows,positioning,shadows}
+\tikzset{
+  main/.style={circle, minimum size = 30mm, thick, draw =black!80, node distance = 10mm},
+  connect/.style={-latex, thick},
+  box/.style={rectangle, draw=black!100}
+}
 
 % Произвольная нумерация списков.
 \usepackage{enumerate}

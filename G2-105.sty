@@ -161,7 +161,8 @@
 
 %  Раздел
 \newcounter{chapter}
-\renewcommand\thechapter{\@arabic\c@chapter}
+\newcommand\thechapterc{\@arabic\c@chapter}
+\renewcommand\thechapter{\CYRG\CYRL\CYRA\CYRV\CYRA \ \thechapterc.}
 \newcommand\chapter{%
  \clearpage%
  \if@figuresonchapter%
@@ -180,7 +181,7 @@
 
 %  Подраздел
 \newcounter{section}[chapter]
-\renewcommand\thesection{\thechapter.\@arabic\c@section}
+\renewcommand\thesection{\thechapterc.\@arabic\c@section}
 \newcommand\section{%
  \@startsection{section}{1}%
  {\GostTitleIndent}{\GostBeforTitleSkip}{\GostAfterTitleSkip}%
@@ -505,14 +506,14 @@
 \newcommand\listoffigures{\chapter*{\listfigurename}\@starttoc{lof}}
 \newcommand\listoftables{\chapter*{\listtablename}\@starttoc{lot}}
 
-\newcommand{\l@chapter}   {\@dottedtocline{1}{0mm}{1.6em}}
+\newcommand{\l@chapter}   {\@dottedtocline{1}{0mm}{5em}}
 \newcommand{\l@section}{\@dottedtocline{2}{10mm}{2.8em}}
 \newcommand{\l@subsection}   {\@dottedtocline{3}{20mm}{4.0em}}
 \newcommand{\l@subsubsection}{\@dottedtocline{4}{30mm}{5.2em}}
 \newcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
 \newcommand*\l@table {\@dottedtocline{1}{1.5em}{2.3em}}
 \newcommand\@tocrmarg{2.55em} %отступ правого края оглавления перенесённых строк
-\newcommand\@dotsep{4.5}      %между точками в оглавлении в em
+\newcommand\@dotsep{2}      %между точками в оглавлении в em
 \linespread{\Gost@LineSpread} %полуторный межстрочный интервал
 
 \AtBeginDocument{%
